@@ -294,6 +294,10 @@ ion-icon{
         grid-column-start: span 2;
         grid-column-end: span 2;
     }
+
+    body {
+      background-color: orange;
+  }
     
 }
 
@@ -323,6 +327,10 @@ ion-icon{
         grid-column-start: span 1;
         grid-column-end: span 1;
     }
+
+    body {
+      background-color: blue;
+  }
 }
 
 /* Mobile devices */
@@ -330,6 +338,7 @@ ion-icon{
 
     body {
         padding: 0 40px 0 40px;
+        background-color: red;
     }
 }
 
