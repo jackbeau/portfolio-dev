@@ -1,0 +1,398 @@
+ body {
+    background-color: black;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 0 100px 0 100px;
+    margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    
+    height: 50px;
+  }
+  
+  .topnav a {
+    font-weight: 510;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .topnav .left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: #ccc;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: #FF810D;
+  }
+
+.title {
+    font-weight: 590;
+    font-size: 64px;
+    line-height: 76px;
+    margin: 0;
+}
+
+.titlebody {
+    font-weight: 510;
+    font-size: 16px;
+    line-height: 19px;
+    color: #CCC;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 510;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+
+    color: white;
+}
+
+h2 {
+    font-weight: 590;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0;
+    color: #CCC;
+}
+
+.intro {
+  position: relative;
+  height: 100vh;
+}
+
+.intro div  {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.intro .titlebody {
+    width: 60%;
+}
+
+.skills {
+    padding-bottom: 200px;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 48px;
+    grid-row-gap: 48px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+}
+
+.skills .info {
+    grid-row-start: span 2;
+    grid-row-end: span 2;
+    grid-column-start: span 1;
+    grid-column-end: span 1;
+}
+
+.emphasis {
+    color: #FF810D;
+}
+
+ion-icon{
+    font-size: 55px;
+    color: #FF810D;
+}
+
+.work {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.work .info {
+    margin-bottom: 48px;
+}
+
+.project-card {
+    margin-bottom: 48px;
+    border-radius:25px;
+    transform: scale(1);
+    transition: all 0.25s;
+    transition-timing-function: ease-out;
+    overflow: hidden;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  opacity:0.8;
+}
+
+.project-card img{
+  transform: scale(1);
+  transition: all 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.project-card:hover img{
+  transform: scale(1.05);
+}
+
+.project-card-image {
+    object-fit: cover;
+    width: 100%;
+
+    vertical-align: middle;
+
+    border-radius: 25px 25px 0 0;
+}
+
+.project-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 12px;
+
+    background-color: #1A1a1a;
+
+    border-radius: 0 0 25px 25px;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 12px 16px;
+
+    background: #8f8f8f;
+    border-radius: 10px;
+}
+
+.tag p {
+    color: #fff;
+}
+
+.contact {
+    height: 100vh;
+    position: relative;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact > div  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -100px;
+}
+
+/* Small screens, laptops */
+
+@media screen and (max-width: 1024px) {
+
+    body {
+        padding: 0 60px 0 60px;
+    }
+
+    .intro {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    
+        padding-top: 100px;
+    }
+    
+    .intro .titlebody {
+        width: 100%;
+    }
+
+    .skills {
+        padding-top: 250px;
+        padding-bottom: 200px;
+    
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        
+    }
+
+    .skills .info {
+        grid-row-start: span 2;
+        grid-row-end: span 2;
+        grid-column-start: span 2;
+        grid-column-end: span 2;
+    }
+    
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+    .work {
+        grid-row-gap: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        padding-top: 250px;
+        padding-bottom: 200px;
+    
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .skills .info {
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+        grid-column-start: span 1;
+        grid-column-end: span 1;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 0 40px 0 40px;
+    }
+}
+
+/* ==========================================================================
+Animation System
+========================================================================== */
+.animate {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    animation-fill-mode: backwards;
+  }
+
+    /* Fade In */
+    .animate.fade { animation-name: animate-fade; }
+  
+    @keyframes animate-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+  
+  /* Fade Up In */
+  .animate.fadeup { animation-name: animate-fadeup; }
+  
+  @keyframes animate-fadeup {
+    0% {
+      opacity: 0;
+      transform:translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform:translateY(0px);
+    }
+  }
+
+  /* Animation Delays */
+  .delay-1 {
+    animation-delay: 0.4s;
+  }
+  .delay-2 {
+    animation-delay: 0.5s;
+  }
+  .delay-3 {
+    animation-delay: 0.6s;
+  }
+  .delay-4 {
+    animation-delay: 0.8s;
+  }
+  .delay-5 {
+    animation-delay: 1s;
+  }
+  .delay-6 {
+    animation-delay: 1.2s;
+  }
+  
+  @media screen and (prefers-reduced-motion: reduce) {
+    .animate {
+      animation: none !important;
+    }
+  }
