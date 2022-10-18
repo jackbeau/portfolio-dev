@@ -202,7 +202,7 @@ p {
 
     transition: all 0.25s;
     transition-timing-function: ease-out;
-    
+
     overflow: hidden;
 
 }
@@ -292,6 +292,17 @@ p {
     top: 50%;
     height: 100px;
     margin-top: -100px;
+}
+
+.contact .tag {
+  transform: scale(1);
+  transition: all 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.contact .tag:hover {
+  background-color: rgb(170, 170, 170);
+  transform: scale(1.05);
 }
 
 /* Small screens, laptops */
