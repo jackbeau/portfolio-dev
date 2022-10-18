@@ -148,9 +148,37 @@ p {
     color: #FF810D;
 }
 
-ion-icon{
-    font-size: 55px;
-    color: #FF810D;
+.item ion-icon {
+  font-size: 55px;
+  color: #FF810D;
+  transform: scale(1);
+  transition: all 0.1s;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.item:hover ion-icon {
+  font-size: 55px;
+  color: #FF810D;
+  transform: scale(1.1);
+}
+
+.item {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.50s;
+  transition-timing-function: ease-in;
+}
+
+.item.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.square-animation {
+  animation: wipe-enter 1s 1;
+}
 }
 
 .work {
@@ -168,10 +196,22 @@ ion-icon{
 .project-card {
     margin-bottom: 48px;
     border-radius:25px;
-    transform: scale(1);
+
+    transform: scale(0.8);
+    opacity: 0;
+
     transition: all 0.25s;
     transition-timing-function: ease-out;
+    
     overflow: hidden;
+
+}
+
+.project-card.active {
+  transform: scale(1);
+  opacity: 1;
+  transition-timing-function: ease-out;
+  transition: all 0.50s;
 }
 
 .project-card:hover {
